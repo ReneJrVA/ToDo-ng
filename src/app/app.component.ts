@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-ng';
+  todoList: string[] = [];
+  currentTodo = '';
+
+  addTodo(): void {
+    this.todoList.push(this.currentTodo);
+    this.currentTodo = '';
+  }
+  deleteTodo(i: number): void {
+    this.todoList.splice(i, 1);
+  }
 }
