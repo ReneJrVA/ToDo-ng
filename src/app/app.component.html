@@ -1,10 +1,11 @@
 <div>
-
   <input (change)="addTodo()" [(ngModel)]="currentTodo">
   <div *ngFor="let todo  of todoList; let i = index">
     <div>
       <span>{{todo}}</span>
-      <button (click)="deleteTodo(i)">delete</button>
+      <button (click)="deleteTodo(i)" >
+        <img src="../assets/pics/clear.png" height="10" width="10" alt="lol"/>
+      </button>
     </div>
     <br/>
   </div>
